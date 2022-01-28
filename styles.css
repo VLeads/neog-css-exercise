@@ -1,0 +1,748 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;   
+}
+
+/* don't use rem for size less than 4 px */
+
+html {
+    font-size:62.5%  /*this size means 10px, it is used for easy rem conversion based on 10px size and based on user font-size setting & for responsiveness*/
+}
+:root{
+    --card-shadow: #00000033;
+    --off-white: rgb(231, 231, 231);
+    --card-border-radius: 4px;
+    --light-grey: #626262;
+    --icon-color: #515151;
+}
+
+body{
+    background-color: var(--off-white);
+    font-family: sans-serif;
+    
+}
+
+.heading{
+margin-top: 10px;
+margin-bottom: 10px;
+text-align: center;
+border-bottom: 1px solid black;
+}
+
+.sm-card{
+    margin: 5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 1.5px 2px 1px var(--card-shadow) ;
+    /* width: 21.8rem; */
+    width: 34rem;
+    height: 16rem;
+    /* height: 9.5rem; */
+    background-color: white;
+    border-radius: var(--card-border-radius);
+}
+
+.sm-card-main{
+    display: flex;
+}
+
+.sm-card-main-img{
+    width: 11.2rem;
+    height: 11.2rem;
+    border-top-left-radius: var(--card-border-radius);
+    border-top-right-radius: var(--card-border-radius);
+}
+
+.sm-card-heading{
+    margin-top: 2.2rem;
+    margin-left: 1.8rem;
+}
+
+.sm-card-heading > h2{
+font-size: 1.77rem;
+font-weight: 600
+}
+.sm-card-heading > p{
+    font-size: 1.4rem;
+    font-weight: 540;
+    color: var(--light-grey);
+    margin-top: 0.5rem
+}
+
+.card-footer{
+    display: flex;
+    /* height: 2.5rem */
+    justify-content: space-around;
+}
+
+.card-footer > button{
+border: none;
+background-color: white;
+margin-top: 1.4rem;
+color: blue;
+font-weight: 550;
+font-size: 1.4rem;
+cursor: pointer
+}
+
+.card-footer > .icon-btn{
+    color: var(--icon-color);
+    font-size: 1.7rem;
+}
+
+/* ----- large card ---- */
+
+.lg-card{
+    box-shadow: 0px 1.5px 2px 1px var(--card-shadow) ;
+    width: 34rem;
+    height: 31rem;
+    border-radius: 4px;
+    background-color: white;
+    margin: 6rem
+}
+
+.lg-card-main-img{
+    width: 34rem;
+    height: 20rem;
+}
+
+.lg-card-main{
+    position: relative;
+}
+
+.lg-card-heading{
+  position: absolute;
+  top:14.5rem;
+  left: 1.7rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.lg-card-heading > p{
+margin-top: 4px;
+font-weight: 600
+}
+
+.lg-card-desc{
+    margin: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    color:var(--light-grey)
+}
+
+/* show only icons for card footer */
+
+/* ! using nth-child is not a good practice, instead use class name */
+.footer-text > button:nth-child(1), 
+.footer-text > button:nth-child(2){
+    display: none;
+}
+
+.footer-text{
+    justify-content: flex-end;
+}
+
+.footer-text > button {
+    margin-right: 2.6rem
+}
+
+/* show only text for card footer */
+
+.extra-large{
+    height: 36rem
+}
+
+.extra-large-text-outside-img{
+margin-top: 1.5rem;
+margin-left: 1.5rem
+}
+
+.extra-large-text-outside-img > h2{
+    font-size: 1.8rem;
+}
+
+.extra-large-text-outside-img > p{
+margin-top: 5px;
+font-size: 1.4rem;
+color: var(--light-grey);
+font-weight: 600
+}
+
+.extra-large-card-desc{
+    margin-bottom: 4px;
+}
+
+.footer-icons > button:nth-child(3), 
+.footer-icons > button:nth-child(4),
+.footer-icons > button:nth-child(5){
+    display: none;
+}
+
+.footer-icons{
+    justify-content: flex-start;
+}
+
+.footer-icons > button {
+    margin-left: 2.5rem;
+    cursor: pointer
+}
+
+/* ---positioning cards */
+.small-card{
+    display: flex;
+    justify-content: center;
+}
+
+.large-card{
+    display: flex;
+    justify-content: space-evenly;
+}
+/* ---positioning cards */
+
+/* --------Drawer------------- */
+
+.drawer-center{
+    display: flex;
+    justify-content: center;
+}
+
+.drawer{
+    margin: 5rem;
+    width: 24rem;
+    height: 28rem;
+    box-shadow: 0px 1px 2px 1px var(--card-shadow);
+    background-color: white;
+    border-radius: var(--card-border-radius);
+    display: flex;
+    flex-direction: column;
+}
+
+.drawer-header{
+    min-height: 7.2rem;
+    padding-top: 2rem;
+    padding-left: 1.5rem 
+}
+
+.drawer-header > p{
+    font-size: 1.5rem;
+    color: var(--light-grey);
+    margin-top: 4px
+}
+
+.drawer-body{
+    margin: 1rem;
+    margin-top: 1rem;;
+}
+
+
+.drawer-body > ul > li {
+    list-style: none;
+    display: flex;
+    margin-bottom: 4px;
+    padding: 1rem;
+    cursor: pointer;
+   
+}
+
+.drawer-body > ul > li:first-child,
+.selected{
+    background-color: #EDE1FD;
+    border-radius: 4px;
+    color: #8052F0;
+}
+
+.drawer-body > ul > li:hover{
+    background-color: #f3f2f2;
+    border-radius: 4px;
+}
+
+.icon{
+    color: var(--icon-color);
+    font-size: 2rem;
+    margin-right: 5rem;
+}
+
+.text-for-icon{
+    font-size: 1.4rem;
+    align-self: center;
+}
+
+.drawer-body > ul > li:first-child,
+.selected{
+    background-color: #EDE1FD;
+    border-radius: 4px;
+    color: #8052F0
+}
+
+/* ----Chips---- */
+
+.chips{
+    margin: 2rem;
+    padding:1.6rem;
+    background-color: #F0F0F0;
+    min-width: 40rem;
+    min-height: 8rem ;
+    display: flex;  
+    flex-direction: column; 
+    border-bottom: 1px solid grey;
+}
+
+.chip-title{
+    margin-bottom : 4px ;
+    color: #8c8b8b;
+    font-size: 1.2rem;
+}
+
+.chip-item-container{
+    display: flex;
+}
+
+
+.chip-item{
+    font-size: 1.5rem;
+    display: flex;
+    margin-right: 0.7rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #E0E0E0;
+    padding: 8px;
+    border-radius: 15px;
+    /* flex-grow:1; */
+}
+
+.text-for-chip{
+    border: none;
+    background-color: #F0F0F0;
+    font-size: 1.5rem;
+}
+
+
+.text-for-chip:focus{
+    outline: none;
+}
+
+.cancel-icon{
+    margin-left: 6px;
+    color: #929292
+}
+
+/* ----header----- */
+
+.header-center{
+    margin: 4rem;
+}
+
+.header{
+    background-color: #6200EE;
+    /* width: 60rem; */
+    width: 100%;
+    height: 4.8rem;
+    display: flex;
+    padding: 0 4px;
+    font-size: 2rem;
+    color: white;
+    position: relative;
+    justify-content: space-between;
+}
+
+.header-main{
+    display: flex;
+    padding: 1.2rem;
+    justify-content: flex-start;
+    order: -1;
+    flex: 1 1 auto
+}
+
+.header-text{
+    padding-left: 1.2rem
+}
+
+.header-links{
+    display: flex;
+    justify-content: flex-end;
+    order: 1;
+    padding: 1.2rem;
+}
+
+.header-links-item{
+list-style-type: none;
+display: flex;
+
+}
+
+.header-links-item > li{
+    margin-left: 3rem;
+}
+
+/* ----Badge---- */
+
+.badges{
+    margin: 4rem;
+}
+
+.text-with-badge{
+    display: flex;
+    margin-bottom: 2.5rem;
+}
+
+.badge-text{
+    font-size: 1.6rem;
+    position: relative;
+}
+
+
+.badge-text[badge-data]::after{
+    content:attr(badge-data);
+    position: absolute;
+    top: -10px;
+    right: -20px;
+    font-size: 10px;
+    background: blue;
+    color: white;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 600;
+}
+
+.large-badge-text{
+    font-size: 1.6rem;
+    position: relative;
+}
+
+.large-badge-text[badge-data]::after{
+    content: attr(badge-data);
+    position: absolute;
+    top: -10px;
+    right: -22px;
+    font-size: 20px;
+    color: white;
+    background: blue;
+    border-radius: 50%;
+    width: 27px;
+    height: 27px;
+    text-align:center;
+    font-weight: 700;
+    line-height: 25px;
+}
+
+.btn-with-badge{
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.btn-badge-text{
+    font-size: 1.6rem;
+}
+
+.active-btn{
+    width: auto;
+    position: relative;
+    cursor: pointer;
+    padding: 0px 12px 0px 12px;
+    line-height: 36px;
+    background-color: #3535f0;
+    font-size: 1.5rem;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-left: 7px;
+    box-shadow: 0px 1px 1px 1px var(--card-shadow);
+}
+
+.active-btn[badge-data]::after{
+    content: attr(badge-data);
+    position: absolute;
+    top: -8px;
+    left: -7px;
+    border-radius: 50%;
+    background: #ff4081;
+    color: white;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.hide-btn{
+    width: auto;
+    position: relative;
+    cursor: pointer;
+    padding: 0px 12px 0px 12px;
+    line-height: 36px;
+    box-shadow: 0px 1px 1px 1px var(--card-shadow);
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 4px;
+    margin-left: 7px;
+}
+
+.hide-btn[badge-data]::after{
+    content: attr(badge-data);
+    position: absolute;
+    top: -8px;
+    right: -7px;
+    border-radius: 50%;
+    background: #4728f5;
+    color: white;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.home-badge{
+    font-size: 2.5rem;
+    position: relative;
+}
+
+.home-badge[badge-data]::after{
+    content: attr(badge-data);
+    position: absolute;
+    top: -8px;
+    right: -7px;
+    border-radius: 50%;
+    font-size: 10px;
+    background: #f72c2c;
+    color: white;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 22px;
+}
+
+/* ------Snackbar----- */
+
+.snackbar-position{
+    margin: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.snackbar{
+    display: flex;
+    width: 36rem;
+    background-color: #333333;
+    height: 4.4rem;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 4px;
+    /* position: absolute; */  /* it will be used when used in main app*/
+}
+
+.snackbar-text{
+    font-size: 1.4rem;
+    color: white;
+    margin: 0;
+    padding: 10px 15px;
+}
+
+.snackbar-actions{
+    display: flex;
+    margin-left: 7px;
+    margin-right: 12px;
+    align-items: center;
+}
+
+.snackbar-retry-btn{
+    color: #BB86F6;
+    background-color: transparent;
+    font-weight: bold;
+    border: none;
+    letter-spacing: 0.7px;
+}
+
+.snackbar-cancel{
+    color: white;
+    background-color: transparent;
+    font-weight: bold;
+    border: none;
+    margin-left: 20px;
+}
+
+/* -----Dialog---- */
+.dialog-position{
+    margin: 3rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.dialog-alert{
+    display: flex;
+    width: 25rem;
+    height: 16rem;
+    background: white;
+    box-shadow: 0 1px 1px 1px var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+}
+
+.dialog-header{
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+}
+
+.dialog-text{
+    padding-top: 1.5rem;
+    padding-left:1.5rem;
+    padding-bottom: 5rem;
+    font-size: 1.5rem;
+    color: var(--light-grey);
+}
+
+.dialog-action{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;   
+    padding-right: 15px
+}
+
+.action-1{
+    color: #6200ee;
+    border: none;
+    background-color: transparent;
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.action-2{
+    color: #6200ee;
+    border: none;
+    background-color: transparent;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.dialog-simple{
+    width: 23rem;
+    height: 25rem;
+    box-shadow: 0 1px 1px 1px var(--card-shadow);
+    background-color: white;
+}
+
+.dialog-simple > ul {
+    list-style: none;
+    padding-top: 2.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.dialog-simple > ul > li {
+    color: #6a6a6a;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.user-icon{
+    font-size: 3rem;
+    margin-right: 12px;
+    vertical-align: middle;
+    color: #9E9E9E;
+}
+
+.dialog-simple > ul > li:hover{
+    background-color: #e9e9e9;
+    border-radius: 2px;
+}
+
+.dialog-confirm{
+    width: 24rem;
+    height: 28.5rem;
+    background:white;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px 1px var(--card-shadow);
+}
+
+.mb-1{
+    margin-bottom: 1rem;
+}
+
+.radio-list-item{
+    height: 18rem;
+    border-top: 1.5px solid #8e8d8d;
+    border-bottom: 1.5px solid #8e8d8d;
+    padding: 18px;
+    padding-left: 25px;
+    overflow-y: scroll;
+}
+
+.item-radio{
+    display: flex;
+    color: var(--light-grey);
+    margin-bottom: 2rem;
+}
+
+.item-radio:last-child{
+    margin-bottom: 0;
+}
+
+.item-radio > label{
+    font-size: 1.8rem;
+}
+
+/* .item-radio >  */
+input[type="radio"] {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 0.8rem
+}
+
+/* ----- TAB ------ */
+
+.tabs-position{
+    margin: 2rem;
+    
+}
+
+.tab-fixed{
+width: 57rem;
+height: 5rem;
+background-color: white;
+margin-bottom: 3rem;
+}
+
+.tab-fixed-btn{
+    border: none;
+background-color: transparent;
+padding: 15px;
+padding-left: 20px;
+padding-right: 20px;
+cursor: pointer;
+color: var(--light-grey);
+font-weight: 500;
+letter-spacing: 1px;
+}
+
+.tab-fixed-btn:hover{
+    background-color: #9876c7;
+    color: white
+}
+
+.tab-fixed-btn:nth-child(2){
+    border-bottom: 2px solid #6200EE;
+    color: #6200EE;
+    font-weight: bold;
+}
+
+.tab-scrollable{
+    width: 40rem;
+    height: 6rem;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.tab-scrollable::-webkit-scrollbar {
+    display: none;
+}

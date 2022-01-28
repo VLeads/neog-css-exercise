@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>CSS Assignment</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1 class="heading">Cards</h1>
+      <div class="cards">
+        <div class="small-card">
+          <div class="sm-card">
+            <div class="sm-card-main">
+              <img
+                class="sm-card-main-img"
+                src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg"
+                alt="image"
+              />
+              <div class="sm-card-heading">
+                <h2>Our Changing Planet</h2>
+                <p>by Kurt Wagner</p>
+              </div>
+            </div>
+            <div class="card-footer">
+              <button>READ</button>
+              <button>BOOKMARK</button>
+              <button class="icon-btn">
+                <i class="far fa-heart"></i>
+              </button>
+              <button class="icon-btn">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+              </button>
+              <button class="icon-btn">
+                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- large card -->
+        <div class="large-card">
+          <div class="lg-card">
+            <div class="lg-card-main">
+              <img
+                class="lg-card-main-img"
+                src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg"
+                alt="image"
+              />
+              <div class="lg-card-heading">
+                <h2>Our Changing Planet</h2>
+                <p>by Kurt Wagner</p>
+              </div>
+            </div>
+            <p class="lg-card-desc">
+              Visit ten places on our planet that are undergoing the biggest
+              changes today.
+            </p>
+            <div class="card-footer">
+              <button>READ</button>
+              <button>BOOKMARK</button>
+              <button class="icon-btn">
+                <i class="far fa-heart"></i>
+              </button>
+              <button class="icon-btn">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+              </button>
+              <button class="icon-btn">
+                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- large card layout for icons only -->
+
+          <div class="lg-card">
+            <div class="lg-card-main">
+              <img
+                class="lg-card-main-img"
+                src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg"
+                alt="image"
+              />
+              <div class="lg-card-heading">
+                <h2>Our Changing Planet</h2>
+                <p>by Kurt Wagner</p>
+              </div>
+            </div>
+            <p class="lg-card-desc">
+              Visit ten places on our planet that are undergoing the biggest
+              changes today.
+            </p>
+            <div class="card-footer footer-text">
+              <button>READ</button>
+              <button>BOOKMARK</button>
+              <button class="icon-btn">
+                <i class="far fa-heart"></i>
+              </button>
+              <button class="icon-btn">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+              </button>
+              <button class="icon-btn">
+                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- large card layout for text only -->
+
+          <div class="lg-card extra-large">
+            <div class="lg-card-main">
+              <img
+                class="lg-card-main-img"
+                src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg"
+                alt="image"
+              />
+              <div class="extra-large-text-outside-img">
+                <h2>Our Changing Planet</h2>
+                <p>by Kurt Wagner</p>
+              </div>
+            </div>
+            <p class="lg-card-desc extra-large-card-desc">
+              Visit ten places on our planet that are undergoing the biggest
+              changes today.
+            </p>
+            <div class="card-footer footer-icons">
+              <button>READ</button>
+              <button>BOOKMARK</button>
+              <button class="icon-btn">
+                <i class="far fa-heart"></i>
+              </button>
+              <button class="icon-btn">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+              </button>
+              <button class="icon-btn">
+                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-------- Drawer------- -->
+      <h1 class="heading">Drawer</h1>
+      <div class="drawer-center">
+        <div class="drawer">
+          <div class="drawer-header">
+            <h1>Title</h1>
+            <p>subtext</p>
+          </div>
+          <div class="drawer-body">
+            <ul>
+              <li>
+                <span class="icon selected"><i class="fas fa-inbox"></i></span>
+                <p class="text-for-icon">Inbox</p>
+              </li>
+              <li>
+                <span class="icon"><i class="fas fa-star"></i></span>
+                <p class="text-for-icon">Star</p>
+              </li>
+              <li>
+                <span class="icon"><i class="fas fa-paper-plane"></i></span>
+                <p class="text-for-icon">Sent Mail</p>
+              </li>
+              <li>
+                <span class="icon"><i class="far fa-envelope-open"></i></span>
+                <p class="text-for-icon">Drafts</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- --------Chips------- -->
+      <h1 class="heading">Chips</h1>
+      <div class="chips">
+        <p class="chip-title">Favorite Fruits</p>
+        <div class="chip-item-container">
+          <div class="chip-item">
+            <p>Apple</p>
+            <span class="cancel-icon"><i class="fas fa-times-circle"></i></span>
+          </div>
+          <div class="chip-item">
+            <p>Banana</p>
+            <span class="cancel-icon"><i class="fas fa-times-circle"></i></span>
+          </div>
+          <div class="chip-item">
+            <p>Strawberry</p>
+            <span class="cancel-icon"><i class="fas fa-times-circle"></i></span>
+          </div>
+          <div class="chip-item">
+            <p>Orange</p>
+            <span class="cancel-icon"><i class="fas fa-times-circle"></i></span>
+          </div>
+          <div class="chip-item">
+            <p>Kiwi</p>
+            <span class="cancel-icon"><i class="fas fa-times-circle"></i></span>
+          </div>
+          <input class="text-for-chip" type="text" placeholder="New Fruit..." />
+        </div>
+      </div>
+
+      <!-- ---Header---- -->
+      <h1 class="heading">Header</h1>
+      <div class="header-center">
+        <div class="header">
+          <section class="header-main">
+            <div class="header-menu"><i class="fas fa-bars"></i></div>
+            <div class="header-text">San Francisco, CA</div>
+          </section>
+
+          <section class="header-links">
+            <ul class="header-links-item">
+              <li><i class="fas fa-download"></i></li>
+              <li><i class="fas fa-print"></i></li>
+              <li><i class="fas fa-bookmark"></i></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+
+      <!-- ------Badge----- -->
+      <h1 class="heading">Badges</h1>
+      <div class="badges">
+        <p class="text-with-badge">
+          <span class="badge-text" badge-data="4">Text with a badge</span>
+        </p>
+        <p class="text-with-badge">
+          <span class="large-badge-text" badge-data="1"
+            >Text with large badge</span
+          >
+        </p>
+        <p class="btn-with-badge">
+          <span class="btn-badge-text">Button with badge on the left</span>
+          <button class="active-btn" badge-data="8">Action</button>
+        </p>
+        <p class="btn-with-badge">
+          <span class="btn-badge-text">Button with badge on the right</span>
+          <button class="hide-btn" badge-data="7">Action</button>
+        </p>
+        <p class="btn-with-badge">
+          <span class="btn-badge-text">Icon with a badge</span
+          ><span class="home-badge" badge-data="15">
+            <i class="fas fa-home"></i>
+          </span>
+        </p>
+      </div>
+
+      <!-- ---Snackbar--- -->
+      <h1 class="heading">Snackbar</h1>
+      <div class="snackbar-position">
+        <div class="snackbar">
+          <div class="snackbar-text">Can't send photo. Retry in 5 seconds.</div>
+          <div class="snackbar-actions">
+            <button class="snackbar-retry-btn">RETRY</button>
+            <button class="snackbar-cancel">X</button>
+          </div>
+        </div>
+      </div>
+
+      <!--  --- Dialogs ---- -->
+      <h1 class="heading">Dialogs</h1>
+      <div class="dialog-position">
+        <div class="dialog-alert">
+          <h1 class="dialog-header">Dialog header</h1>
+          <p class="dialog-text">Dialog body text</p>
+          <div class="dialog-action">
+            <button class="action-1">ACTION 1</button>
+            <button class="action-2">ACTION 2</button>
+          </div>
+        </div>
+
+        <div class="dialog-simple">
+          <h1 class="dialog-header">Dialog header</h1>
+          <ul>
+            <li class="list-item">
+              <span class="user-icon"><i class="fas fa-user-circle"></i></span
+              ><span class="item">Item 1</span>
+            </li>
+            <li>
+              <span class="user-icon"><i class="fas fa-user-circle"></i></span
+              ><span class="item">Item 2</span>
+            </li>
+            <li>
+              <span class="user-icon"><i class="fas fa-user-circle"></i></span
+              ><span class="item">Item 3</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="dialog-confirm">
+          <h1 class="dialog-header mb-1">Dialog header</h1>
+          <div class="radio-list-item">
+            <span class="item-radio">
+              <label>
+                <input type="radio" class="radio" name="item" />Item 1</label
+              >
+            </span>
+            <span class="item-radio">
+              <label>
+                <input type="radio" class="radio" name="item" />Item 2</label
+              >
+            </span>
+            <span class="item-radio">
+              <label>
+                <input type="radio" class="radio" name="item" />Item 3</label
+              >
+            </span>
+            <span class="item-radio">
+              <label>
+                <input type="radio" class="radio" name="item" />Item 4</label
+              >
+            </span>
+            <span class="item-radio">
+              <label>
+                <input type="radio" class="radio" name="item" />Item 5</label
+              >
+            </span>
+          </div>
+          <div class="dialog-action">
+            <div class="dialog-action">
+              <button class="action-1">ACTION 1</button>
+              <button class="action-2">ACTION 2</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ----- Tabs ----- -->
+      <h1 class="heading">Tabs</h1>
+      <div class="tabs-position">
+        <div class="tab-fixed">
+          <button class="tab-fixed-btn">TAB ONE</button>
+          <button class="tab-fixed-btn">TAB TWO</button>
+          <button class="tab-fixed-btn">TAB THREE</button>
+          <button class="tab-fixed-btn">TAB FOUR</button>
+          <button class="tab-fixed-btn">TAB FIVE</button>
+        </div>
+
+        <div class="tab-fixed tab-scrollable ">
+          <button class="tab-fixed-btn">TAB ONE</button>
+          <button class="tab-fixed-btn">TAB TWO</button>
+          <button class="tab-fixed-btn">TAB THREE</button>
+          <button class="tab-fixed-btn">TAB FOUR</button>
+          <button class="tab-fixed-btn">TAB FIVE</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
